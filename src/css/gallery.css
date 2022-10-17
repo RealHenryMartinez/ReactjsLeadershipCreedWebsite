@@ -1,0 +1,100 @@
+
+
+
+
+#image-gallery {
+    display: flex;
+    overflow-x: scroll;
+   scroll-behavior: smooth;
+   scroll-snap-type: x mandatory;
+   
+   
+   
+   
+}
+
+.image-example {
+    
+
+    
+    /* padding: 5px; */
+    width:fit-content;
+    flex-shrink: 0;
+    
+    scroll-snap-align: start;
+
+    height: 300px;
+    
+    
+  }
+
+#main-gallery {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    
+    
+    
+}
+
+#person {
+    width: 450px; 
+    margin-top: 80px;
+    height: auto;
+    float: right; 
+    margin-right: 60px;
+    margin-right: 10px;
+    justify-content: center; 
+
+
+    /* border: 1px black solid; */
+
+
+}
+
+#filler {
+    float: none;
+    margin-top: -15px;
+    background-color: white;
+}
+
+#filler2{
+    padding: 10px;
+}
+
+.icon-creed1 {
+
+    color: aliceblue;
+    text-align: center;
+    transform: scale(4, 4);
+    width: 100%;
+    height: auto;
+    float: unset;
+    white-space: normal;
+}
+
+@keyframes front-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-42px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes front-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-42px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@300&display=swap');
+
+#down {
+    scroll-behavior: smooth;
+    /* width: 50px; */
+    text-align: center;
+}
+
+#down-button {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    border-radius: 100px;
+    background-color: coral;
+    border: coral 1px;
+    font-family: 'Poppins', sans-serif;
+    animation-name: button;
+    animation-play-state:paused;
+
+}
+
+#down-button:hover {
+    background-color: rgb(212, 101, 61);
+    border: rgb(212, 101, 61) 1px;
+    animation-name: button;
+    animation-play-state: running;
+    
+}
+
+@keyframes button {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(20px);
+    }
+}
+
+.buttonComponent {
+    display: flex;
+}
+
+#slideLeft {
+    display: none;
+}
+#slideRight {
+    display: none;
+}
+
+/* Turn on animation to true of false */
+
+.buttonCollection {
+    text-align: end;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-right: 9%;
+    background-color: white;
+    padding-bottom: 50px;
+    
+    
+}
+
+#startbtn {
+    border: coral 1px solid;
+    border-radius: 100px;
+    background-color: coral;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 5%;
+}
+
+#startbtn:hover {
+    background-color: rgb(212, 101, 61);
+    border-color: rgb(212, 101, 61);
+}
+
+#stopbtn {
+    border: coral 1px solid;
+    border-radius: 100px;
+    background-color: coral;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+#stopbtn:hover {
+    background-color: rgb(212, 101, 61);
+    border-color: rgb(212, 101, 61);
+}
+

@@ -1,0 +1,159 @@
+@media only screen and (max-width: 390px) {
+    body {
+      background-color: rgb(25, 24, 32);
+    }
+    #title {
+        font-size: 25px;
+    
+    }
+
+    /* Image  */
+    #person {
+        width: 90%;
+        border: rgb(255, 255, 255) 10px solid;
+        
+    }
+
+    #header {
+        height: fit-content;
+    }
+
+    #question {
+        padding-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+        width: 80%;
+    }
+
+    #leader-header {
+        font-size: 35px;
+        margin-top: 200px;
+    }
+
+    .image-example {
+        padding: 5px;
+        width: 265px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        height: auto;
+        
+      }
+
+      .description {
+        margin-left: 10%
+      }
+
+      #main-gallery {
+        margin: auto;
+        width: 70%;
+        padding: 10px;
+        
+        
+    }
+
+    /* BUTTON */
+    #slideLeft {
+        display: unset;
+        width: 30px;
+        height: 50px;
+        margin-top: 50%;
+        background-color: rgb(32, 31, 40);
+        color: white;
+        border: rgb(32, 31, 40) 1px solid;
+        margin-left: 5px;
+        padding-top: 5px;
+    }
+    #slideRight {
+        display: unset;
+        width: 30px;
+        height: 50px;
+        margin-top: 50%;
+        background-color: rgb(32, 31, 40);
+        color: white;
+        border: rgb(32, 31, 40) 1px solid;
+        margin-right: 5px;
+        padding-top: 5px;
+    }
+
+    #slideRight:hover {
+        background-color: rgb(60, 58, 75);
+    }
+
+    #slideLeft:hover {
+        background-color: rgb(60, 58, 75);
+    }
+
+
+    .creed {
+        font-size: 15px;
+        width: 250px;
+        text-align: center;
+        color:aliceblue;
+        text-align: center;
+        margin-left: 5%;
+    }
+
+    .buttonCollection {
+        padding-right: 30%;
+        text-align: end;
+        
+    }
+
+    #startbtn {
+        font-size: 15px;
+    }
+    
+    #stopbtn {
+        font-size: 15px;
+    }
+    #playAnimLabel {
+        font-size: 20px;
+        text-align: center;
+        margin-left: 40%;
+        
+        
+    }
+    #buttonstrend {
+        margin-left: 40%;
+        margin-right: 0%;
+        margin-top: 10%;
+    }
+
+    #down-button {
+        text-align: center;
+        margin-right: 2%;
+    }
+
+
+    @keyframes leaderslidein {
+        0% {
+            
+            transform: translateX(0%);
+        }
+      
+        90% {
+    
+            transform: translateX(-5%);
+        }
+        100% {
+    
+            transform: translateX(0%);
+        }
+      }
+      @keyframes questionslidein {
+        0% {
+
+          margin-right: 0%;
+          transform: translateX(0%);
+        }
+      
+        90% {
+          margin-left: 10%;
+          transform: translateX(-5%);
+          
+        }
+        100% {
+            transform: translateX(0%);
+        }
+      }
+  }
