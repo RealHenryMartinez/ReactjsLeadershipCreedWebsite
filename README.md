@@ -6,8 +6,9 @@
 
 
 > Dependencies / Technologies used
-- Used React.js, CSS
-- There are none at the current moment that you will need to download
+
+- Used React.js, CSS <- Will need Node installed to run a React JS website in your prefered IDE
+
 
 
 
