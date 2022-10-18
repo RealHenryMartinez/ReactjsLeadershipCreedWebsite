@@ -40,42 +40,50 @@ function HomePage() {
 
 
   // getting the button id and adding an "addEventListener" to listen for the click event from the user
+    if(startbtn){
+      startbtn.addEventListener("click", () => {
 
-    startbtn.addEventListener("click", () => {
-
-      // change the image animation to be true / play animation when startbtn is clicked
-      person.style.animation = "front-animation 5s infinite";
-      
-      // person.style.webkitAnimation = "front-animation 5s infinite";
-      // person.style.opacity = "100%";
-    });
+        // change the image animation to be true / play animation when startbtn is clicked
+        person.style.animation = "front-animation 5s infinite";
+        
+        // person.style.webkitAnimation = "front-animation 5s infinite";
+        // person.style.opacity = "100%";
+      });
+    }
+    
   
   
 
-
-  stopbtn.addEventListener("click", () => {
-    // change the image animation to be false / stop animation when startbtn is clicked by disabeling it with ""
-    person.style.animation = "";
-    // person.style.opacity = "0%";
-  });
+    if(stopbtn){
+      stopbtn.addEventListener("click", () => {
+        // change the image animation to be false / stop animation when startbtn is clicked by disabeling it with ""
+        person.style.animation = "";
+        // person.style.opacity = "0%";
+      });
+    }
+  
 
 
 // giving the variable a method for when it is clicked 
-
-  buttonRight.onclick = () => {
-    // get the whole div containing the images and give the html method "scrollLeft" to move 200px
-    document.getElementById("image-gallery").scrollLeft += 200;
-
-    console.log("right");
-  };
- 
+    if(buttonRight){
+      buttonRight.onclick = () => {
+        // get the whole div containing the images and give the html method "scrollLeft" to move 200px
+        document.getElementById("image-gallery").scrollLeft += 200;
+    
+        console.log("right");
+      };
+     
+    }
+  
   // get the whole div containing the images and give the html method "scrollRight" to move 200px
-
-    buttonLeft.onclick = () => {
-      document.getElementById("image-gallery").scrollLeft -= 200
-      console.log("left")
-
-    };
+    if(buttonLeft){
+      buttonLeft.onclick = () => {
+        document.getElementById("image-gallery").scrollLeft -= 200
+        console.log("left")
+  
+      };
+    }
+    
   
 
 
