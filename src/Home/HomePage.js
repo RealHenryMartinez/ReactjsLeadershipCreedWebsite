@@ -26,63 +26,137 @@ function HomePage() {
 
 
   // grabbing the buttons from the DOM HTML into a variable of a const
-  const buttonRight = document.getElementById('slideRight');
-  const buttonLeft = document.getElementById('slideLeft');
+  
+  
 
   // ANIMATION ON AND OFF
-  const startbtn = document.getElementById('startbtn');
+  
 
-  const stopbtn = document.getElementById('stopbtn');
-
-  const person = document.getElementById('person');
   
 
 
-
-  // getting the button id and adding an "addEventListener" to listen for the click event from the user
+  const startAnim = () => {
+    const startbtn = document.getElementById('startbtn');
+    for ( let i = 0; i < 2; i++ ) {
+      document.getElementById("startbtn").click();
+    }
     if(startbtn){
       startbtn.addEventListener("click", () => {
+        const person = document.getElementById('person');
 
         // change the image animation to be true / play animation when startbtn is clicked
         person.style.animation = "front-animation 5s infinite";
+        
+        
+        // person.style.webkitAnimation = "front-animation 5s infinite";
+        // person.style.opacity = "100%";
+      });
+      console.log("clicked")
+    }
+  }
+
+  const stopAnim = () => {
+    const stopbtn = document.getElementById('stopbtn');
+    for ( let i = 0; i < 2; i++ ) {
+      document.getElementById("stopbtn").click();
+    }
+    if(stopbtn){
+      
+      stopbtn.addEventListener("click", () => {
+        const person = document.getElementById('person');
+
+        // change the image animation to be true / play animation when startbtn is clicked
+        person.style.animation = "";
         
         // person.style.webkitAnimation = "front-animation 5s infinite";
         // person.style.opacity = "100%";
       });
     }
-    
+  }
+
+  const slideL = () => {
+    const buttonLeft = document.getElementById('slideLeft');
+    for ( let i = 0; i < 2; i++ ) {
+      document.getElementById("slideLeft").click();
+    }
+    if(buttonLeft){
+      
+      buttonLeft.addEventListener("click", () => {
+
+        // change the image animation to be true / play animation when startbtn is clicked
+        document.getElementById("image-gallery").scrollLeft -= 200;
+        
+        // person.style.webkitAnimation = "front-animation 5s infinite";
+        // person.style.opacity = "100%";
+      });
+      console.log("clicked left")
+    }
+  }
+  const slideR = () => {
+    const buttonRight = document.getElementById('slideRight');
+    for ( let i = 0; i < 2; i++ ) {
+      document.getElementById("slideRight").click();
+    }
+    if(buttonRight){
+      
+      buttonRight.addEventListener("click", () => {
+
+        // change the image animation to be true / play animation when startbtn is clicked
+        document.getElementById("image-gallery").scrollLeft += 200;
+        
+        // person.style.webkitAnimation = "front-animation 5s infinite";
+        // person.style.opacity = "100%";
+      });
+    }
+  }
+ 
   
   
 
-    if(stopbtn){
-      stopbtn.addEventListener("click", () => {
-        // change the image animation to be false / stop animation when startbtn is clicked by disabeling it with ""
-        person.style.animation = "";
-        // person.style.opacity = "0%";
-      });
-    }
+    // useEffect(() => {
+    //     // getting the button id and adding an "addEventListener" to listen for the click event from the user
+      
+    //   startbtn.addEventListener("click", () => {
+
+    //     // change the image animation to be true / play animation when startbtn is clicked
+    //     person.style.animation = "front-animation 5s infinite";
+        
+    //     // person.style.webkitAnimation = "front-animation 5s infinite";
+    //     // person.style.opacity = "100%";
+    //   });
+    // });
+    // useEffect(() => {
+
+    //   stopbtn.addEventListener("click", () => {
+    //     // change the image animation to be false / stop animation when startbtn is clicked by disabeling it with ""
+    //     person.style.animation = "";
+    //     // person.style.opacity = "0%";
+    //   });
+    // });
+    // useEffect(() => {
+    //   buttonRight.onclick = () => {
+    //     // get the whole div containing the images and give the html method "scrollLeft" to move 200px
+    //     document.getElementById("image-gallery").scrollLeft += 200;
+    
+    //     console.log("right");
+    //   };
+    // });
+    // useEffect(() => {
+    //   buttonLeft.onclick = () => {
+    //     document.getElementById("image-gallery").scrollLeft -= 200
+    //     console.log("left")
+  
+    //   };
+    // });
   
 
 
 // giving the variable a method for when it is clicked 
-    if(buttonRight){
-      buttonRight.onclick = () => {
-        // get the whole div containing the images and give the html method "scrollLeft" to move 200px
-        document.getElementById("image-gallery").scrollLeft += 200;
-    
-        console.log("right");
-      };
-     
-    }
+
   
+ 
   // get the whole div containing the images and give the html method "scrollRight" to move 200px
-    if(buttonLeft){
-      buttonLeft.onclick = () => {
-        document.getElementById("image-gallery").scrollLeft -= 200
-        console.log("left")
-  
-      };
-    }
+
     
   
 
@@ -103,8 +177,8 @@ function HomePage() {
       <div className="buttonCollection">
         <h2 id="playAnimLabel">Play Image Animation</h2>
         <div id="buttonstrend">
-          <button id="startbtn">Start</button>
-          <button id="stopbtn">Stop</button>
+          <button id="startbtn" onClick={startAnim}>Start</button>
+          <button id="stopbtn" onClick={stopAnim}>Stop</button>
         </div>
         
       </div>
@@ -124,7 +198,7 @@ function HomePage() {
       </div>
       {/* Small image gallery */}
       <div className="buttonComponent">
-        <button id="slideLeft" type="button">
+        <button id="slideLeft" type="button" onClick={slideL}>
           <span className="material-symbols-outlined">arrow_back_ios</span>
         </button>
         <div id="main-gallery">
@@ -173,7 +247,7 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <button id="slideRight" type="button">
+        <button id="slideRight" type="button" onClick={slideR}>
           <span className="material-symbols-outlined">arrow_forward_ios</span>
         </button>
       </div>
