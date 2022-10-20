@@ -8,8 +8,8 @@
 
 > Dependencies / Technologies used
 
-- Used React.js, CSS <- Will need Node installed to run a React JS website in your prefered IDE
-
+- Used React.js <- Will need Node installed to run a React JS website in your prefered IDE
+- For CSS: this app used styled components: download with npm: npm install --save styled-components
 
 
 

@@ -1,11 +1,11 @@
 
 import './App.css';
-import HomePage from './Home/HomePage';
+import Creed from './pages/Home/Creed';
 
 function App() {
   return (
     <>
-      <HomePage />
+      <Creed />
     </>
   );
 }
