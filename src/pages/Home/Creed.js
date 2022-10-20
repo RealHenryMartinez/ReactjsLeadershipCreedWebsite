@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // css styles
 
@@ -19,6 +19,11 @@ function Creed() {
   const [initial, setInitial] = useState('')
   const [slide, setSlide] = useState(200)
 
+  useEffect(() => {
+    for (let i = 0; i < 2; i++) {
+      document.getElementById('startbtn').click()
+    }
+  }, [])
   const onStartAnim = () => {
     const startbtn = document.getElementById('startbtn')
     for (let i = 0; i < 2; i++) {
